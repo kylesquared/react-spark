@@ -1,6 +1,14 @@
-# React Spark
+####Original Repo
+This is a fork of the React-Spark project found at: 
+https://github.com/darrenmerrett/react-spark
 
+with modifications to support Laravel 5.4 and various other small fixes for personal projects
+
+
+
+# React Spark
 An extension of [Laravel Spark](https://spark.laravel.com) to create Spark projects with [React JS](https://facebook.github.io/react/).
+
 
 * Provides a blade template for you to extend and create your app using React rather than the incumbant Vue framework.
 * Removes boiler plate dependancies that Spark requires.
@@ -18,9 +26,17 @@ This extension separates your project into 2 modules. The Spark Core remains as 
 
 ## Installation
 
-Require the darrenmerrett/react-spark package in your composer.json and update your dependencies.
+Add the kylesquared/react-spark package in your composer.json and update your dependencies.
 
-	composer require darrenmerrett/react-spark
+    "require": {
+        "kylesquared/react-spark": "0.2.0"
+    },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/kylesquared/react-spark.git"
+        }
+    ]
 
 Install npm modules with dependancies
 
@@ -32,17 +48,14 @@ Add the ReactSpark\ServiceProvider to your config/app.php providers array:
 
 Finally, publish files into resources.
 
-	php artisan vendor:publish --provider="darrenmerrett\ReactSpark\ReactSparkServiceProvider"
+	php artisan vendor:publish --provider="kylesquared\ReactSpark\ReactSparkServiceProvider"
 
 ## Upgrading
-
-Update the darrenmerrett/react-spark package.
-
-	composer update darrenmerrett/react-spark
 
 Then update the npm modules
 
 	npm update react-spark-js
+	
 
 ## Creating your app
 

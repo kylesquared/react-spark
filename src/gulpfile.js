@@ -20,7 +20,6 @@ elixir.config.js.browserify.plugins.push(
 );
 
 gulp.task('build-spark-app', function() {
-
     return browserify('resources/assets/js/app.js', { paths: 'vendor/laravel/spark/resources/assets/js' })
       .transform(babelify, { presets: ["es2015"] })
       .bundle()
@@ -32,10 +31,8 @@ gulp.task('build-spark-app', function() {
 });
 
 gulp.task('copy-sweetalert', function() {
-
       gulp.src('node_modules/sweetalert/dist/sweetalert.min.js')
       .pipe(gulp.dest('./public/js/'));
-
       return gulp.src('node_modules/sweetalert/dist/sweetalert.css')
       .pipe(gulp.dest('./public/css/'));
 
@@ -60,8 +57,8 @@ elixir(function(mix) {
       .scripts('../../../node_modules/whatwg-fetch/fetch.js', 'public/js/fetch.js')
 
       .browserify([
-        './vendor/darrenmerrett/react-spark/src/resources/assets/js/react-spark/react-spark.js',
-        './vendor/darrenmerrett/react-spark/src/resources/assets/js/react-spark/reactApp.js',
+        './vendor/kylesquared/react-spark/src/resources/assets/js/react-spark/react-spark.js',
+        './vendor/kylesquared/react-spark/src/resources/assets/js/react-spark/reactApp.js',
       ],
       './public/js/common.js', null,{ paths: 'resources/assets/js'})
 

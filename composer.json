@@ -5,8 +5,8 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Darren Merrett",
-            "email": "darren.merrett@gmail.com"
+            "name": "Kyle Shovan",
+            "email": "kyle@adomi.io"
         }
     ],
     "require": {
@@ -17,7 +17,7 @@
     },
     "autoload": {
         "psr-4": {
-            "darrenmerrett\\ReactSpark\\": "src/"
+            "kylesquared\\ReactSpark\\": "src/"
         }
     }
 }

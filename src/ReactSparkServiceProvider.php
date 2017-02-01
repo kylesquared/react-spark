@@ -1,4 +1,4 @@
-<?php namespace darrenmerrett\ReactSpark;
+<?php namespace kylesquared\ReactSpark;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -15,27 +15,15 @@ class ReactSparkServiceProvider extends ServiceProvider
     {
     
         $this->publishes([
-    
             __DIR__.'/resources/views/react-spark/' => base_path('resources/views/react-spark/'),
-            
-        ]);
-
-        $this->publishes([
-    
             __DIR__.'/resources/assets/js/reactApp/' => base_path('resources/assets/js/reactApp/'),
-            
-        ]);
-
-        $this->publishes([
-    
             __DIR__.'/resources/assets/css/reactApp/' => base_path('resources/assets/css/reactApp/'),
-          
-
+            __DIR__.'/gulpfile.js' => base_path('gulpfile.js'),
         ]);
+
 
         $this->loadViewsFrom(__DIR__.'/resources/views/vendor', 'react-spark-vendor');     
-
-        $this->loadViewsFrom(base_path('resources/views/react-spark'), 'react-spark');     
+        $this->loadViewsFrom(base_path('resources/views/react-spark'), 'react-spark');
 
     }
 
